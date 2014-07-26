@@ -9,6 +9,6 @@ Template.createDebate.events = {
       "description" : description,
       "url" : url
     });
-    console.log("yes");
+    Router.go('/');
   }
 }
