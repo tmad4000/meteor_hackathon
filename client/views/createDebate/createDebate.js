@@ -4,8 +4,7 @@ Template.createDebate.events = {
     var title = $("#inputTitle").val();
     var description = $("#inputDescription").val();
     var url = $("#inputUrl").val();
-		var slug = title.split(" ").join("");
-		console.log(slug);
+    var slug = $("#inputSlug").val();
     Debates.insert({
       "title" : title,
       "description" : description,
