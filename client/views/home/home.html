@@ -1,6 +1,19 @@
 <template name="home">
-  <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+  {{#each debates}}
+    {{>debate}}
+  {{/each}}
+</template>
+
+<template name="debate">
+  <div>
+    <div class="debate-title">
+      {{title}}
+    </div>
+    <div class="debate-description">
+      {{description}}
+    </div>
+    <div class="debate-url">
+      {{url}}
+    </div>
   </div>
 </template>
