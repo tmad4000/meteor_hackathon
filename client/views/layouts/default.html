@@ -20,3 +20,14 @@
     </div>
   </div>
 </template>
+
+
+<template name="container">
+  {{ >yield}}
+</template>
+
+
+<template name="default">
+  {{ >nav}}
+  {{ >container}}
+</template>
