@@ -1,11 +1,13 @@
 <template name="home">
-  {{#each debates}}
-    {{>debate}}
-  {{/each}}
+  <ol class="grid">
+    {{#each debates}}
+      {{>debate}}
+    {{/each}}
+  </ol>
 </template>
 
 <template name="debate">
-  <div>
+  <li>
     <div class="debate-title">
       {{title}}
     </div>
@@ -15,5 +17,5 @@
     <div class="debate-url">
       {{url}}
     </div>
-  </div>
+  </li>
 </template>
