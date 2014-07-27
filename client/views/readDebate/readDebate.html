@@ -6,4 +6,16 @@
 
 
 <button type="button" id="btnAddComment">Click Me!</button>
+{{>comment}}
+</template>
+
+<template name="comment">
+  <div>
+    {{text}}
+  </div>
+  <div>
+    {{#each commentHelper _id}}
+      {{>comment}}
+    {{/each}}
+  </div>
 </template>

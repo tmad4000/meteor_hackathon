@@ -9,7 +9,9 @@ Template.readDebate.events = {
       "votes" : 0,
       "type" : "con"
     }
-    console.log(this);
   }
 }
 
+UI.registerHelper("commentHelper" , function(parent){
+  return Points.find({"parent": parent})
+});
