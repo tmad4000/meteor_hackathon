@@ -20,8 +20,11 @@
         font-weight: bold;
         text-align: center;
         background: #f2f2f2;
-
-        overflow:scroll;
+        
+	    min-height: 145px;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow:ellipsis;
     }
 
 

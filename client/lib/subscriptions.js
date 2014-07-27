@@ -2,3 +2,4 @@
 //Meteor.subscribe('messages');
 
 Meteor.subscribe("debates");
+Meteor.subscribe("points");

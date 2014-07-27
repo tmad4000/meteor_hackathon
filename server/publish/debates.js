@@ -15,3 +15,4 @@ Debates.allow({
       return true;    
   }
 });
+
