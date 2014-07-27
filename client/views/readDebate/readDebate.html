@@ -1,11 +1,15 @@
 <template name="readDebate">
-<p>{{title}}</p>
-<p>{{description}}</p>
-<p>{{url}}</p>
+<div class="page-header">
+  <h1>{{title}}</h1>
+  <p class="pull-right"><a href="{{url}}"><span class="glyphicon glyphicon-link"></span> {{url}}</a></p>
+  <p>{{description}}</p>
+</div>
 {{list points}}
 
 
-<button type="button" id="btnAddComment">Click Me!</button>
+<p>
+  <button type="button" id="btnAddComment" class="btn btn-lg btn-default">Click Me!</button>
+</p>
 {{>comment}}
 </template>
 
@@ -13,12 +17,13 @@
   {{#if text}}
     <div>
       {{text}}
+      {{#unless editing}}
+        <span class="glyphicon glyphicon-comment text-primary add-comment"></span>
+      {{/unless}}
     </div>
     <div class="comment-wrap">
       {{#if editing}}
         {{>editingComment}}
-      {{else}}
-        <span class="glyphicon glyphicon-comment add-comment"></span>
       {{/if}}
     </div>
   {{/if}}
