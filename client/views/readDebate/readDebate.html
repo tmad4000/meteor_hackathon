@@ -4,11 +4,12 @@
   <p class="pull-right"><a href="{{url}}"><span class="glyphicon glyphicon-link"></span> {{url}}</a></p>
   <p>{{description}}</p>
 </div>
-<div>
-  <label class="sr-only" for="newPoint">New Point</label>
-  <input type="email" id="newPoint" class="form-control" placeholder="Enter a point.">
-</div>
-
+{{#if currentUser}}
+  <div>
+    <label class="sr-only" for="newPoint">New Point</label>
+    <input type="email" id="newPoint" class="form-control" placeholder="Enter a point.">
+  </div>
+{{/if}}
 {{>comment}}
 </template>
 

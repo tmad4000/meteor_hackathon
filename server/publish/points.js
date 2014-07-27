@@ -3,8 +3,10 @@ Meteor.publish("points", function () {
 });
 
 Points.allow({
-  insert: function () {
+  insert: function (userId, doc) {
+    if (userId){
       return true;
+    }
   },
 
   remove: function (){
