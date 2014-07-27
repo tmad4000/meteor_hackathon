@@ -31,7 +31,11 @@ Template.readDebate.events = {
   },
   'blur #comment-input' : function(e){
     Session.set("currentEditing", null);
-  }
+  },
+	'submit #newPoint':function(e){
+		e.preventDefault();
+		alert('hi');
+	}
 }
 
 Template.comment.pro = function(){
