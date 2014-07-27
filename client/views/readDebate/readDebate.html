@@ -14,8 +14,10 @@
     {{text}}
   </div>
   <div>
-    {{#each commentHelper _id}}
-      {{>comment}}
-    {{/each}}
+		<ul>
+    	{{#each commentHelper _id}}
+				<li>{{>comment}}</li>
+    	{{/each}}
+		</ul>
   </div>
 </template>
