@@ -1,32 +1,40 @@
-.grid {
-    font-size: 0;
-    margin-bottom: 2rem;
-    overflow: hidden;
-    text-align: left;
+.jumbotron {
+  margin-top: 20px;
 }
 
-.gridnode {
-    font-size: 16px;
-    line-height: 30px;
+.grid-node {
+  padding: 10px 10px 0 0;
 }
 
-.grid:last-of-type {
-    margin-bottom: 0;
+.debate {
+  padding: 25px;
+  background: #f2f2f2;
+
+  min-height: 145px;
+
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.debategrid p {
-        padding: 50px;
-        font-size: 32px;
-        font-weight: bold;
-        text-align: center;
-        background: #f2f2f2;
-        
-	    min-height: 145px;
-	    white-space: nowrap;
-	    overflow: hidden;
-	    text-overflow:ellipsis;
-    }
+.debate a:hover,
+.debate a:active {
+  text-decoration: none;
+}
 
+.new.debate {
+  padding: 0;
+  background: transparent;
+  text-align: center;
 
+  border: 1px solid #f2f2f2;
+}
 
-
+.new.debate a {
+  line-height: 110px;
+  font-size: 150px;
+}

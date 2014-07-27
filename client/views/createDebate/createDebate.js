@@ -11,6 +11,6 @@ Template.createDebate.events = {
       "url" : url,
 			"slug" : slug
     });
-    Router.go('/');
+    Router.go('/debates/' + slug);
   }
 }

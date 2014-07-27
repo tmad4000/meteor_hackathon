@@ -6,3 +6,10 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+.edit-comment{
+  width:800px;
+  margin:5px;
+}
+.bootstrap-switch.bootstrap-switch-mini{
+  width:100px;
+}
