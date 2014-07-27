@@ -7,18 +7,21 @@ Debates.insert({
   description : "Ernie Nardi: This is Ernie Nardi from Dyker Heights in Brooklyn, New York, with a question for the ex-Mayor Giuliani.",
   points : [
     {
+      _id: new Meteor.Collection.ObjectID()._str,
       votes: 10,
       type: "point",
       evaluation: null,
       text : "Did New York City [operate] as a sanctuary city, aiding and abetting illegal aliens?",
       children : [
         {
+          _id: new Meteor.Collection.ObjectID()._str,
           votes : 12,
           type : "con",
           evaluation: null,
           text : "Giuliani: New York City was not a sanctuary city.",
           children : [
             {
+              _id: new Meteor.Collection.ObjectID()._str,
               votes : 19,
               type : "pro",
               evaluation: null,
@@ -26,12 +29,14 @@ Debates.insert({
               children : []
             },
             {
+              _id: new Meteor.Collection.ObjectID()._str,
               votes : 7,
               type : "con",
               evaluation: null,
               text : " confusion, three areas in which NYC made exceptions",
               children : [
                 {
+                  _id:  new Meteor.Collection.ObjectID()._str,
                   votes : 8,
                   type : "con",
                   evaluation: null,
@@ -43,6 +48,8 @@ Debates.insert({
           ]
         },
         {
+          _id: new Meteor.Collection.ObjectID()._str,
+          type : "con",
           votes : 5,
           evaluation : null,
           text : "Did New York City [operate] as a sanctuary city, aiding and abetting illegal aliens?",
