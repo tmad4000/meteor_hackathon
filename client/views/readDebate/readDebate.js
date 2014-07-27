@@ -15,7 +15,7 @@ Template.readDebate.events = {
     Session.set("currentEditing", this._id);
     $("#comment-input").focus();
   },
-  'keyup #comment-input' : function(e){
+  'keyup .edit-comment' : function(e){
     e.preventDefault();
 
     if(e.keyCode == 13){
