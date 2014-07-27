@@ -1,21 +1,28 @@
 <template name="home">
-  <ol class="grid">
+<div class="container debategrid">
+        <div class="row">
+<!--   <ol class="grid"> -->
     {{#each debates}}
       {{>debate}}
     {{/each}}
-  </ol>
+  <!-- </ol> -->
+
+         
+    </div>
+</div>
 </template>
 
+
+
+
 <template name="debate">
-  <li>
+  <div class="grid-node col-sm-6 col-md-4 col-lg-3">
+  <p>
     <div class="debate-title">
       {{title}}
     </div>
-    <div class="debate-description">
-      {{description}}
-    </div>
-    <div class="debate-url">
-      {{url}}
-    </div>
-  </li>
+    
+    </p>
+    
+  </div>
 </template>

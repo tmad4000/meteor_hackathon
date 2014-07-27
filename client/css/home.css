@@ -5,11 +5,25 @@
     text-align: left;
 }
 
-.grid>* {
+.gridnode {
     font-size: 16px;
-    line-height: 22px;
+    line-height: 30px;
 }
 
 .grid:last-of-type {
     margin-bottom: 0;
 }
+
+.debategrid p {
+        padding: 50px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        background: #f2f2f2;
+
+        overflow:scroll;
+    }
+
+
+
+
