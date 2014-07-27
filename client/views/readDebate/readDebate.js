@@ -38,6 +38,7 @@ Template.readDebate.events = {
   },
   'keyup #newPoint' : function(e){
     e.preventDefault();
+
     if(e.keyCode == 13){
       Points.insert({
         parent : this._id,
@@ -45,6 +46,8 @@ Template.readDebate.events = {
         dt : new Date(),
         type : "point"
       });
+
+      $("#newPoint").val('');
       return false;
     }
     return false;
