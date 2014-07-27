@@ -10,9 +10,20 @@
 </template>
 
 <template name="comment">
-  <div>
-    {{text}}
-  </div>
+  {{#if text}}
+    <div>
+      {{text}}
+    </div>
+    <div class="comment-wrap">
+      {{#if editing}}
+        <form id="comment-input">
+          <input id="testt" type="text" autofocus="autofocus" />
+        </form>
+      {{else}}
+        <span class="glyphicon glyphicon-comment add-comment"></span>
+      {{/if}}
+    </div>
+  {{/if}}
   <div>
 		<ul>
     	{{#each commentHelper _id}}
@@ -21,3 +32,4 @@
 		</ul>
   </div>
 </template>
+
