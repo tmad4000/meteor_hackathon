@@ -3,6 +3,12 @@ Template.createDebate.events = {
     e.preventDefault();
 
     var title = $("#inputTitle").val();
+
+    if (!title) {
+      $('#inputTitle').parent().addClass('has-error');
+      return;
+    }
+
     var initSlug = title.toLowerCase().replace(/ /g,'-').replace(/[^a-z0-9\-]/g, '');
 
     var slug = initSlug;
