@@ -5,11 +5,12 @@ Template.readDebate.events = {
     var text = "this is a test";
     var o = {
       "text" : text,
-      "evaluation" : null,
+      "point-type" : null,
       "votes" : 0,
       "type" : "con",
       "user" : Meteor.userId()
     }
+    // #? What's this
   },
   'click .add-comment' : function(e){
     Session.set("currentEditing", this._id);
@@ -19,7 +20,7 @@ Template.readDebate.events = {
     e.preventDefault();
 
     if(e.keyCode == 13){
-			var value = $("#evaluation").bootstrapSwitch('state');
+			var value = $("#point-type").bootstrapSwitch('state');
 			if(value){
 				value = 'pro';
 			} else {
@@ -36,18 +37,18 @@ Template.readDebate.events = {
     }
     return false;
   },
-  'keyup #newPoint' : function(e){
+  'keyup #new-point' : function(e){
     e.preventDefault();
 
     if(e.keyCode == 13){
       Points.insert({
         parent : this._id,
-        text : $("#newPoint").val(),
+        text : $("#new-point").val(),
         dt : new Date(),
         type : "point"
       });
 
-      $("#newPoint").val('');
+      $("#new-point").val('');
       return false;
     }
     return false;
@@ -66,15 +67,15 @@ Template.comment.editing = function(){
 
 Template.editingComment.rendered = function(){
   $("#comment-input").focus();
-	$("#evaluation").bootstrapSwitch();
+	$("#point-type").bootstrapSwitch();
 }
 
 Template.readDebate.rendered = function(){
-	$("#pointEvaluation").bootstrapSwitch();
+	$("#point-evaluation").bootstrapSwitch();
 }
 
 Template.editingComment.destroyed = function(){
-	$("#evaluation").bootstrapSwitch('destroy');
+	$("#point-type").bootstrapSwitch('destroy');
 }
 
 UI.registerHelper("commentHelper" , function(parent){

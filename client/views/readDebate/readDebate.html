@@ -6,8 +6,8 @@
 </div>
 {{#if currentUser}}
   <div>
-    <label class="sr-only" for="newPoint">New Point</label>
-    <input type="email" id="newPoint" class="form-control" placeholder="Enter a point.">
+    <label class="sr-only" for="new-point">New Point</label>
+    <input type="email" id="new-point" class="form-control" placeholder="Enter a point.">
   </div>
 {{/if}}
 {{>comment}}
@@ -48,7 +48,7 @@
 <template name="editingComment">
   <div class="input-group edit-comment">
     <div class="input-group-addon">
-          <input type="checkbox" id="evaluation" data-on-text="Pro" data-off-text="Con" data-on-color="success" data-off-color="danger" data-size="mini" checked  />
+          <input type="checkbox" id="point-type" data-on-text="Pro" data-off-text="Con" data-on-color="success" data-off-color="danger" data-size="mini" checked  />
     </div>
     <input id="comment-input" class="form-control" type="text" />
   </div>
