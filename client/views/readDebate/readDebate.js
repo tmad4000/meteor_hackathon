@@ -29,10 +29,14 @@ Template.readDebate.events = {
     }
     return false;
   }
-  /*,
+  ,
   'blur #comment-input' : function(e){
     Session.set("currentEditing", null);
-  }*/
+  },
+	'submit #newPoint':function(e){
+		e.preventDefault();
+
+	}
 }
 
 Template.comment.pro = function(){
@@ -48,6 +52,10 @@ Template.comment.editing = function(){
 Template.editingComment.rendered = function(){
   $("#comment-input").focus();
 	$("#evaluation").bootstrapSwitch();
+}
+
+Template.readDebate.rendered = function(){
+	$("#pointEvaluation").bootstrapSwitch();
 }
 
 Template.editingComment.destroyed = function(){
