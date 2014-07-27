@@ -6,20 +6,25 @@
 </div>
 {{list points}}
 
-
-<p>
-  <button type="button" id="btnAddComment" class="btn btn-lg btn-default">Click Me!</button>
-</p>
 {{>comment}}
 </template>
 
 <template name="comment">
   {{#if text}}
     <div>
+      {{#if pro}}
+        <span class="label label-success">Pro</span>
+      {{else}}
+        {{#if con}}
+          <span class="label label-danger">Con</span>
+        {{/if}}
+      {{/if}}
       {{text}}
-      {{#unless editing}}
-        <span class="glyphicon glyphicon-comment text-primary add-comment"></span>
-      {{/unless}}
+      {{#if currentUser}}
+        {{#unless editing}}
+          <span class="glyphicon glyphicon-comment text-primary add-comment"></span>
+        {{/unless}}
+      {{/if}}
     </div>
     <div class="comment-wrap">
       {{#if editing}}

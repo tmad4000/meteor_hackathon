@@ -20,7 +20,8 @@ Template.readDebate.events = {
       Points.insert({
         parent : this._id,
         text : $("#comment-input").val(),
-        dt : new Date()
+        dt : new Date(),
+        type : "con"
       });
       Session.set("currentEditing", null);
       return false;
@@ -29,6 +30,12 @@ Template.readDebate.events = {
   }
 }
 
+Template.comment.pro = function(){
+  return this.type === "pro";
+}
+Template.comment.con = function(){
+  return this.type === "con";
+}
 Template.comment.editing = function(){
   return Session.equals("currentEditing", this._id);
 }

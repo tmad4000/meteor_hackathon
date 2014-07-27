@@ -16,7 +16,8 @@ Meteor.startup(function () {
       type : "con",
       evaluation: null,
       text : "Did New York City [operate] as a sanctuary city, aiding and abetting illegal aliens?",
-      dt : new Date()
+      dt : new Date(),
+      type: "con"
     });
     var parent = Points.insert({
       parent: debate,
@@ -24,7 +25,8 @@ Meteor.startup(function () {
       type : "point",
       evaluation : null,
       text : "sadfasdf sdaf sdaf asdf dsafdsafasdfds gal aliens?",
-      dt : new Date()
+      dt : new Date(),
+      type: "con"
     });
     Points.insert({
       parent: parent,
@@ -32,7 +34,8 @@ Meteor.startup(function () {
       type : "con",
       evaluation: null,
       text : "single illegal immigrant that New York City could find that either committed a crime or was suspected of a crime.",
-      dt : new Date()
+      dt : new Date(),
+      type : "pro"
     });
     var parent = Points.insert({
       parent: parent,
@@ -40,7 +43,8 @@ Meteor.startup(function () {
       type : "con",
       evaluation: null,
       text : "Giuliani: New York City was not a sanctuary city.",
-      dt: new Date()
+      dt: new Date(),
+      type : "con"
     });
     Points.insert({
       parent: parent,
@@ -48,7 +52,8 @@ Meteor.startup(function () {
       type : "con",
       evaluation: null,
       text : "Giulianadsf adsf dsaf dsaf  a sanctuary city.",
-      dt : new Date()
+      dt : new Date(),
+      type : "pro"
     });
     Points.insert({
       parent: parent,
@@ -56,7 +61,8 @@ Meteor.startup(function () {
       type : "con",
       evaluation: null,
       text : "3213123 123 213 anctuary city.",
-      dt : new Date()
+      dt : new Date(),
+      type : "con"
     });
   }
 });
