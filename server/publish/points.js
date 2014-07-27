@@ -8,11 +8,14 @@ Points.allow({
   },
 
   remove: function (){
-      return true;    
+      return false;    
   },
 
-  update: function() {
+  update: function(userId, doc) {
+    if (user == userId){
       return true;    
+    }
+    return false; 
   }
 
 });

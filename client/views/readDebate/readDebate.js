@@ -7,7 +7,8 @@ Template.readDebate.events = {
       "text" : text,
       "evaluation" : null,
       "votes" : 0,
-      "type" : "con"
+      "type" : "con",
+      "user" : Meteor.userId()
     }
   },
   'click .add-comment' : function(e){
@@ -27,6 +28,9 @@ Template.readDebate.events = {
       return false;
     }
     return false;
+  },
+  'blur #comment-input' : function(e){
+    Session.set("currentEditing", null);
   }
 }
 
