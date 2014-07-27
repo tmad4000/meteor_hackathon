@@ -14,4 +14,5 @@ Debates.allow({
   update: function() {
       return true;    
   }
+
 });
