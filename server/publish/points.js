@@ -14,10 +14,7 @@ Points.allow({
   },
 
   update: function(userId, doc) {
-    if (user == userId){
-      return true;    
-    }
-    return false; 
+    return true; 
   }
 
 });

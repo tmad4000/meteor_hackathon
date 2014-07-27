@@ -15,14 +15,33 @@
 
 <template name="comment">
   {{#if text}}
-    <div>
-      {{#if pro}}
-        <span class="label label-success">Pro</span>
-      {{else}}
-        {{#if con}}
-          <span class="label label-danger">Con</span>
-        {{/if}}
-      {{/if}}
+    <div class="comment-{{pointEvaluation}}">
+      <div class="btn-group btn-group-xs">
+          {{#if pointEvaluation}}
+            {{#if pro}}
+              <span class="label label-success">Pro</span>
+            {{else}}
+              <span class="label label-danger">Con</span>
+            {{/if}}
+          {{else}}
+            {{#if pro}}
+             <button type="button" class="btn btn-default dropdown-toggle btn-success" data-toggle="dropdown">
+              Pro<span class="caret"></span>
+             </button>
+            {{else}}
+              {{#if con}}
+                <button type="button" class="btn btn-default dropdown-toggle btn-danger" data-toggle="dropdown">
+                  Con<span class="caret"></span>
+                </button>
+              {{/if}}
+            {{/if}}
+          {{/if}}
+            
+        <ul class="dropdown-menu" role="menu">
+          <li><a class="btn-refute">Refute</a></li>
+        </ul>
+      </div>
+      
       {{text}}
       {{#if currentUser}}
         {{#unless editing}}
@@ -39,7 +58,7 @@
   <div>
 		<ul>
     	{{#each commentHelper _id}}
-				<li>{{>comment}}</li>
+				<li class="comment">{{>comment}}</li>
     	{{/each}}
 		</ul>
   </div>

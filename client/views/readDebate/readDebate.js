@@ -12,6 +12,10 @@ Template.readDebate.events = {
     }
     // #? What's this
   },
+  'click .btn-refute' : function(e){
+    e.preventDefault();
+    Points.update(this._id, {$set : { "pointEvaluation" : "refuted"}});
+  },
   'click .add-comment' : function(e){
     Session.set("currentEditing", this._id);
     $("#comment-input").focus();
@@ -32,7 +36,8 @@ Template.readDebate.events = {
         dt : new Date(),
         type : value 
       });
-      Session.set("currentEditing", null);
+      Session.set("currentEditing", this._id);
+      $("#comment-input").val("");
       return false;
     }
     return false;

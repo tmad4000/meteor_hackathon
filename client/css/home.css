@@ -34,3 +34,9 @@
   line-height: 110px;
   font-size: 150px;
 }
+.comment{
+  margin: 5px;
+}
+.comment-refuted{
+  opacity: 0.3;
+}
