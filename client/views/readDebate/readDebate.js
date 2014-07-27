@@ -42,6 +42,11 @@ Template.comment.editing = function(){
 
 Template.editingComment.rendered = function(){
   $("#comment-input").focus();
+	$("#evaluation").bootstrapSwitch();
+}
+
+Template.editingComment.destroyed = function(){
+	$("#evaluation").bootstrapSwitch('destroy');
 }
 
 UI.registerHelper("commentHelper" , function(parent){
