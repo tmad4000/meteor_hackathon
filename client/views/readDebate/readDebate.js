@@ -17,29 +17,25 @@ Template.readDebate.events = {
   },
   'keyup #comment-input' : function(e){
     e.preventDefault();
+
     if(e.keyCode == 13){
+			var value = $("#evaluation").bootstrapSwitch('state');
+			if(value){
+				value = 'pro';
+			} else {
+				value = 'con';
+			}
       Points.insert({
         parent : this._id,
         text : $("#comment-input").val(),
         dt : new Date(),
-        type : "con"
+        type : value 
       });
       Session.set("currentEditing", null);
       return false;
     }
     return false;
   },
-<<<<<<< HEAD
-	'submit #newPoint':function(e){
-		e.preventDefault();
-		var value = $("#pointEvaluation").val();
-		if(value === "on"){
-			value = "pro";
-		} else {
-			value = "con";
-		}	
-	}
-=======
   'keyup #newPoint' : function(e){
     e.preventDefault();
     if(e.keyCode == 13){
@@ -52,8 +48,7 @@ Template.readDebate.events = {
       return false;
     }
     return false;
-  },
->>>>>>> 0b62774b04c18f1941bedafbfefd7342a9db87c3
+  }
 }
 
 Template.comment.pro = function(){
