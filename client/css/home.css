@@ -30,6 +30,8 @@
   padding: 0;
   background: transparent;
   text-align: center;
+
+  border: 1px solid #f2f2f2;
 }
 
 .new.debate a {
