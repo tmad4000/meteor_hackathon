@@ -27,6 +27,9 @@ Template.readDebate.events = {
       return false;
     }
     return false;
+  },
+  'blur #comment-input' : function(e){
+    Session.set("currentEditing", null);
   }
 }
 
