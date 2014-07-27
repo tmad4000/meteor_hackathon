@@ -13,3 +13,6 @@ body {
 .bootstrap-switch.bootstrap-switch-mini{
   width:100px;
 }
+.bootstrap-switch.bootstrap-switch-small{
+  min-width: 100px;
+}

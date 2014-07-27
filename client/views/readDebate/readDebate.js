@@ -28,15 +28,20 @@ Template.readDebate.events = {
       return false;
     }
     return false;
-  }
-  ,
-  'blur #comment-input' : function(e){
-    Session.set("currentEditing", null);
   },
-	'submit #newPoint':function(e){
-		e.preventDefault();
-
-	}
+  'keyup #newPoint' : function(e){
+    e.preventDefault();
+    if(e.keyCode == 13){
+      Points.insert({
+        parent : this._id,
+        text : $("#newPoint").val(),
+        dt : new Date(),
+        type : "point"
+      });
+      return false;
+    }
+    return false;
+  },
 }
 
 Template.comment.pro = function(){
