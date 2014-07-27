@@ -28,14 +28,19 @@ Template.readDebate.events = {
       return false;
     }
     return false;
-  },
+  }
+  /*,
   'blur #comment-input' : function(e){
     Session.set("currentEditing", null);
+<<<<<<< HEAD
   },
 	'submit #newPoint':function(e){
 		e.preventDefault();
 		alert('hi');
 	}
+=======
+  }*/
+>>>>>>> 505010778843d7136aa8b6c2f4f4fb8116f5c358
 }
 
 Template.comment.pro = function(){

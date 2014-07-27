@@ -48,6 +48,10 @@
 </template>
 
 <template name="editingComment">
-  <input id="comment-input" type="text" />
-	<input type="checkbox" id="evaluation" data-on-text="Pro" data-off-text="Con" data-on-color="success" data-off-color="danger" data-size="small" checked>
+  <div class="input-group">
+    <div class="input-group-addon">
+          <input type="checkbox" id="evaluation" data-on-text="Pro" data-off-text="Con" data-on-color="success" data-off-color="danger" data-size="mini" checked  />
+    </div>
+    <input id="comment-input" class="form-control" type="text" />
+  </div>
 </template>
