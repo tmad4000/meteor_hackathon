@@ -12,3 +12,11 @@ Template.readDebate.events = {
     console.log(this);
   }
 }
+
+UI.registerHelper('list', function(items, options) {
+	console.log(items);
+	console.log(options);
+	for(var i = 0; i < items.length; i++){
+		console.log(items.children[i].text);
+	}
+});
