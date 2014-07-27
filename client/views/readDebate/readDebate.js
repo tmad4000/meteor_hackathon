@@ -19,7 +19,8 @@ Template.readDebate.events = {
     if(e.keyCode == 13){
       Points.insert({
         parent : this._id,
-        text : $("#comment-input").val()
+        text : $("#comment-input").val(),
+        dt : new Date()
       });
       Session.set("currentEditing", null);
       return false;
@@ -37,6 +38,6 @@ Template.editingComment.rendered = function(){
 }
 
 UI.registerHelper("commentHelper" , function(parent){
-  return Points.find({"parent": parent})
+  return Points.find({"parent": parent}, {"sort" : {"dt" : -1}});
 });
 
