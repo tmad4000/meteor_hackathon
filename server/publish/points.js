@@ -4,7 +4,7 @@ Meteor.publish("points", function () {
 
 Points.allow({
   insert: function (userId, doc) {
-    if (userId){
+    if (userId && doc.text != ""){
       return true;
     }
   },
