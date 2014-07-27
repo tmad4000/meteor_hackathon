@@ -3,16 +3,19 @@ Meteor.publish("debates", function () {
 });
 
 Debates.allow({
-  insert: function () {
-      return true;
+  insert:  function (userId, doc) {
+      if (Debates.find({"slug":doc.slug}).count() == 0){
+        return true;
+      }
+      return false;
   },
 
   remove: function (){
-      return true;    
+      return false;    
   },
 
   update: function() {
-      return true;    
+      return false;
   }
 });
 
