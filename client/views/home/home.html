@@ -1,29 +1,27 @@
 <template name="home">
-<div class="container debategrid">
-        <div class="row">
-<!--   <ol class="grid"> -->
-    {{#each debates}}
-      {{>debate}}
-    {{/each}}
-  <!-- </ol> -->
+  <div class="jumbotron">
+    <h1>Justify</h1>
+    <p>Wikipedia for debates</p>
+  </div>
 
-         
+  <div class="container debate-grid">
+    <div class="row">
+      <div class="grid-node col-sm-6 col-md-4 col-lg-3">
+        <div class="new debate">
+          <a href="/debates/new">+</a>
+        </div>
+      </div>
+      {{#each debates}}
+        {{>debate}}
+      {{/each}}
     </div>
-</div>
-</template>
-
-
-
-
-<template name="debate">
-  <div class="grid-node col-sm-6 col-md-4 col-lg-3">
-  <p>
-    <div class="debate-title">
-			<a href="/debates/{{slug}}">{{title}}</a>
-    </div>
-
-    </p>
-    
   </div>
 </template>
 
+<template name="debate">
+  <div class="grid-node col-sm-6 col-md-4 col-lg-3">
+    <div class="debate">
+      <a href="/debates/{{slug}}">{{title}}</a>
+    </div>
+  </div>
+</template>
