@@ -29,6 +29,7 @@ Template.readDebate.events = {
     }
     return false;
   },
+<<<<<<< HEAD
 	'submit #newPoint':function(e){
 		e.preventDefault();
 		var value = $("#pointEvaluation").val();
@@ -38,6 +39,21 @@ Template.readDebate.events = {
 			value = "con";
 		}	
 	}
+=======
+  'keyup #newPoint' : function(e){
+    e.preventDefault();
+    if(e.keyCode == 13){
+      Points.insert({
+        parent : this._id,
+        text : $("#newPoint").val(),
+        dt : new Date(),
+        type : "point"
+      });
+      return false;
+    }
+    return false;
+  },
+>>>>>>> 0b62774b04c18f1941bedafbfefd7342a9db87c3
 }
 
 Template.comment.pro = function(){

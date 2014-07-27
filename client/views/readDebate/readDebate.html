@@ -4,18 +4,10 @@
   <p class="pull-right"><a href="{{url}}"><span class="glyphicon glyphicon-link"></span> {{url}}</a></p>
   <p>{{description}}</p>
 </div>
-<form class="form-inline" id="newPoint" role="form">
-  <div class="form-group">
-    <label class="sr-only" for="newPoint">New Point</label>
-    <input type="email" class="form-control" id="newPoint" placeholder="Enter a point.">
-  </div>
-  <div class="form-group">
-    <div class="input-group">
-			<input type="checkbox" id="pointEvaluation" data-on-text="Pro" data-off-text="Con" data-on-color="success" data-off-color="danger" data-size="small" checked  />
-    </div>
-  </div>
-</form>
-{{list points}}
+<div>
+  <label class="sr-only" for="newPoint">New Point</label>
+  <input type="email" id="newPoint" class="form-control" placeholder="Enter a point.">
+</div>
 
 {{>comment}}
 </template>
@@ -54,9 +46,9 @@
 
 <template name="editingComment">
   <div class="input-group edit-comment">
-    <input id="comment-input" class="form-control" type="text" />
     <div class="input-group-addon">
           <input type="checkbox" id="evaluation" data-on-text="Pro" data-off-text="Con" data-on-color="success" data-off-color="danger" data-size="mini" checked  />
     </div>
+    <input id="comment-input" class="form-control" type="text" />
   </div>
 </template>
