@@ -16,9 +16,7 @@
     </div>
     <div class="comment-wrap">
       {{#if editing}}
-        <form id="comment-input">
-          <input id="testt" type="text" autofocus="autofocus" />
-        </form>
+        {{>editingComment}}
       {{else}}
         <span class="glyphicon glyphicon-comment add-comment"></span>
       {{/if}}
@@ -33,3 +31,6 @@
   </div>
 </template>
 
+<template name="editingComment">
+  <input id="comment-input" type="text" />
+</template>

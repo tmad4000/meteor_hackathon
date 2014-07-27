@@ -12,20 +12,28 @@ Template.readDebate.events = {
   },
   'click .add-comment' : function(e){
     Session.set("currentEditing", this._id);
-    $("#testt").focus();
+    $("#comment-input").focus();
   },
-  'submit #comment-input' : function(e){
+  'keyup #comment-input' : function(e){
     e.preventDefault();
-    Points.insert({
-      parent : this._id,
-      text : $("#comment-input").find("input").val()
-    });
-    Session.set("currentEditing", null);
+    if(e.keyCode == 13){
+      Points.insert({
+        parent : this._id,
+        text : $("#comment-input").val()
+      });
+      Session.set("currentEditing", null);
+      return false;
+    }
+    return false;
   }
 }
 
 Template.comment.editing = function(){
   return Session.equals("currentEditing", this._id);
+}
+
+Template.editingComment.rendered = function(){
+  $("#comment-input").focus();
 }
 
 UI.registerHelper("commentHelper" , function(parent){
