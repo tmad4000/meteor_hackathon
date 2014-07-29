@@ -15,7 +15,7 @@ Meteor Hackathon
     ```bash
     git clone https://github.com/BradRuderman/meteor_hackathon.git
     cd meteor_hackathon
-    mtr install
+    mrt install
     ```
 
 
